@@ -9,7 +9,7 @@ Based on the provided AWS Cost Explorer report, here are three potential areas f
 
 ### Potential Actions:
 - **Optimize Lambda Function Duration**: 
-  - Review the execution time of each Lambda function. If functions are running longer than necessary, refactoring the code or adjusting memory settings could reduce execution time.
+  - Review the execution time of each Lambda function. If functions are running longer than necessary, refactoring or editing the code or adjusting memory settings could reduce execution time.
   
 - **Scheduled Invocation**: 
   - If any Lambda functions are invoked on a schedule but not used regularly, consider adjusting the schedule or switching to a different service.
