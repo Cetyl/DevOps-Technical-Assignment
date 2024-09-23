@@ -58,5 +58,3 @@
 ### 3. Test Notifications
 - Trigger the alarms (for example, by simulating high CPU usage) to ensure that notifications are sent successfully to all subscribed endpoints.
 
-## Summary
-This CloudWatch dashboard design allows comprehensive monitoring of EC2 instances, Lambda functions, and S3 buckets. By setting up specific alarms for critical metrics and linking them to an SNS topic, you can ensure timely alerts and proactive management of resources in the cloud environment.
