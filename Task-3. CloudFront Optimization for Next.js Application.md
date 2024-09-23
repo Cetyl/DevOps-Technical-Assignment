@@ -1,18 +1,30 @@
-# CloudFront Optimization for Next.js Application
+# CloudFront Optimization for Next.js Application (Practical implementation)
+
+
+![CloudFront Optimization for Next js Application](https://github.com/user-attachments/assets/3ba47260-048f-4abf-8545-7c993220a25e)
 
 ## a) High Availability
+
+![High Availability and Failover Testing](https://github.com/user-attachments/assets/e82fd496-2dd4-474e-aefe-f0b2f45f26d2)
 
 ### Strategy for High Availability:
 - **Multi-Origin Setup:** Configure CloudFront to pull content from multiple origins (e.g., AWS S3, API Gateway, Lambda). This ensures redundancy, allowing CloudFront to serve content from alternative origins if one fails.
 - **Regional Distribution:** Deploy the Next.js application across multiple AWS regions. CloudFront can route requests to the nearest healthy origin based on latency and availability.
 
 ### Failover Testing:
+
+![High Availability and Failover Testing](https://github.com/user-attachments/assets/584cf9d9-7c28-47c3-b9e3-67c554dba4ab)
+
+
 - **Simulate Failures:** Manually disable one origin to monitor CloudFront’s ability to reroute requests effectively. Utilize AWS Fault Injection Simulator for more structured failure scenarios.
 - **Monitor Health Checks:** Set up health checks in CloudFront to continuously monitor the status of origins and ensure automatic rerouting in case of failures.
 
 ---
 
 ## b) Bot Attack Mitigation
+
+![Bot Attack Mitigation](https://github.com/user-attachments/assets/64ed73f4-cae7-4b8b-a2c9-61c18722b0d9)
+
 
 ### Methods to Minimize Bot Attacks:
 - **AWS WAF Integration:** Leverage AWS WAF to filter out malicious traffic using predefined rules that identify suspicious patterns and behaviors.
@@ -37,6 +49,9 @@
 
 ## d) Monitoring
 
+![monitoring and logs](https://github.com/user-attachments/assets/b51eadd1-39f4-4254-aef9-ac45b38c0c88)
+
+
 ### Key Metrics to Monitor:
 - **Requests per Second (RPS):** Understand traffic patterns and load.
 - **Cache Hit Ratio:** Measure how effectively content is being cached.
@@ -49,6 +64,9 @@
 ---
 
 ## e) Site Loading Time Optimization
+
+![Site Loading Time Optimization](https://github.com/user-attachments/assets/7a12e351-e7ce-487c-9f60-c47e6a5bfd1d)
+
 
 ### Methods to Reduce Site Loading Time:
 - **Content Caching:** Configure CloudFront to cache static assets (e.g., images, stylesheets) and serve them directly from edge locations.
