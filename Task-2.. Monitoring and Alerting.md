@@ -2,6 +2,7 @@
 
 ![CloudWatch Dashboard Design](https://github.com/user-attachments/assets/7fa80ea6-0254-4f56-9b8b-6746b28d623c)
 
+#### The dashboard monitors EC2 instances' CPU utilization, network traffic, and disk activity; Lambda functions' error counts, invocations, and durations; and S3 buckets' object counts, sizes, and request metrics.
 
 ## Dashboard Components
 
@@ -23,6 +24,11 @@
 
 ## CloudWatch Alarms
 
+![CloudWatch Alarms](https://github.com/user-attachments/assets/e21784ac-0ace-4e67-8981-14017e198ada)
+
+
+#### High CPU usage alarm for EC2 instances to trigger when utilization exceeds 80% for 5 minutes, and a Lambda function errors alarm to trigger when errors exceed 1 in 1 minute, both sending notifications to SNS.
+
 ### 1. High CPU Usage Alarm for EC2 Instances
 - **Metric**: CPU Utilization
 - **Threshold**: Trigger when CPU utilization exceeds 80% for 5 consecutive minutes.
@@ -34,6 +40,10 @@
 - **Actions**: Send a notification to SNS.
 
 ## Setting Up Notifications Using AWS SNS
+
+![Setting Up Notifications Using AWS SNS](https://github.com/user-attachments/assets/86a5f0bf-ba16-4a0b-8422-90d13f2fa905)
+
+#### SNS topic for notifications, link alarms to it for state changes, and test by simulating alarm conditions to ensure successful notification
 
 ### 1. Create an SNS Topic
 - Go to the SNS console and create a new topic (e.g., `MonitoringAlarms`).
