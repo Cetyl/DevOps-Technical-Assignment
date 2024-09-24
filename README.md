@@ -12,62 +12,23 @@ This project focuses on optimizing AWS costs, setting up effective monitoring an
 ## AWS Cost Optimization
 
 ### 1. Lambda Function Costs
-- **Observation:** The Lambda service incurred a total of approximately $418.41 for the month.
-
-#### Potential Actions:
-- **Optimize Lambda Function Duration:**
-  - Review the execution time of each Lambda function. Refactoring code or adjusting memory settings can reduce execution time.
-  
-- **Scheduled Invocation:**
-  - For Lambda functions invoked on a schedule but rarely used, consider adjusting the schedule or switching to a different service.
-
-#### Potential Savings:
-- Optimizing function execution could reduce costs by up to 30%, saving around $125 per month, depending on the number of invocations and average duration.
-
-#### Trade-offs:
-- Refactoring code may require development time and resources. It’s essential to maintain efficiency without sacrificing performance.
+- **Cost:** ~$418.41/month.
+- **Actions:** Optimize execution and adjust schedules.
+- **Savings:** Up to $125/month (30%).
 
 ### 2. EC2 Instances Costs
-- **Observation:** The EC2 instances contributed approximately $135.57.
-
-#### Potential Actions:
-- **Right-Sizing Instances:**
-  - Analyze instance utilization metrics to identify underutilized or over-provisioned instances. Downgrade or terminate consistently underused instances.
-  
-- **Use Spot Instances:**
-  - For non-critical workloads, consider migrating to Spot Instances, which can save up to 90% compared to On-Demand pricing.
-
-#### Potential Savings:
-- Right-sizing could lead to savings of 20-40%, reducing costs by around $27-$54. Utilizing Spot Instances could yield savings of $50-$100 depending on workload requirements.
-
-#### Trade-offs:
-- Right-sizing may impact performance if not executed carefully, and Spot Instances can be interrupted, necessitating strategies to manage interruptions.
+- **Cost:** ~$135.57/month.
+- **Actions:** Right-size instances and use Spot Instances.
+- **Savings:** $27-$154/month.
 
 ### 3. CloudWatch Costs
-- **Observation:** CloudWatch expenses total approximately $73.69.
-
-#### Potential Actions:
-- **Optimize Monitoring:**
-  - Review monitored metrics and logs. Disable or reduce granularity for less critical resources, or reduce log retention periods.
-
-- **Set Alarms Wisely:**
-  - Limit the number of alarms to only those necessary for critical resources.
-
-#### Potential Savings:
-- By optimizing monitoring practices, potential savings could be around 15-25%, equating to approximately $11-$18.
-
-#### Trade-offs:
-- Reducing monitoring may lead to less visibility into resource performance, potentially resulting in missed issues. Careful selection of essential metrics is crucial.
-
-### Summary of Potential Actions
-- **Lambda:** Optimize function duration and scheduling (Potential Savings: $125).
-- **EC2 Instances:** Right-size instances and use Spot Instances (Potential Savings: $77-$154).
-- **CloudWatch:** Optimize monitoring settings and reduce unnecessary logs/alarms (Potential Savings: $11-$18).
+- **Cost:** ~$73.69/month.
+- **Actions:** Reduce monitored metrics and alarms.
+- **Savings:** $11-$18/month.
 
 ### Total Potential Savings
-By implementing the above actions, total potential savings could range from approximately $213 to $297 monthly, significantly optimizing AWS costs while ensuring that service levels are maintained.
+**Approximately $213 to $297/month** through optimization efforts.
 
-Regular monitoring and periodic reviews will further enhance cost efficiency and service effectiveness.
 
 ## Monitoring and Alerting
 ### CloudWatch Dashboard Design
